@@ -1,1 +1,322 @@
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.header__container,
+.hero__container,
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container,
+.footer__container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header__brand {
+  margin-bottom: 12px;
+}
+
+.header__name {
+  font-size: 22px;
+}
+
+.header__tagline {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ===== Navegación ===== */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #1a4cff;
+  font-weight: bold;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link--active {
+  text-decoration: underline;
+}
+
+/* ===== Secciones ===== */
+.section-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.section-lead {
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 30px 0;
+}
+
+.hero__title {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.hero__subtitle {
+  color: #444;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero__description {
+  color: #555;
+  margin-bottom: 18px;
+  max-width: 65ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+/* Botones */
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button--primary {
+  background: #1a4cff;
+  color: #fff;
+}
+
+.button--primary:hover {
+  opacity: 0.9;
+}
+
+.button--secondary {
+  background: #ffffff;
+  border: 2px solid #1a4cff;
+  color: #1a4cff;
+}
+
+.button--secondary:hover {
+  background: #eef2ff;
+}
+
+.button--large {
+  margin-top: 14px;
+  padding: 12px 16px;
+}
+
+/* Stats */
+.hero__stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 12px;
+  min-width: 160px;
+}
+
+.stat__number {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stat__label {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ===== Quote ===== */
+.quote {
+  margin-top: 16px;
+  background: #ffffff;
+  border-left: 4px solid #1a4cff;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.quote__author {
+  display: block;
+  margin-top: 6px;
+  color: #555;
+}
+
+/* ===== Proyectos ===== */
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.project {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.project--featured {
+  border: 2px solid #ffb703;
+}
+
+.project__badge {
+  display: inline-block;
+  background: #ffb703;
+  color: #222;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.project__title {
+  margin-bottom: 6px;
+}
+
+.project__description {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #1a4cff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project__links {
+  display: flex;
+  gap: 12px;
+}
+
+.project__link {
+  color: #1a4cff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Skills ===== */
+.skills__list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skills__item {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* ===== Contacto ===== */
+.contact__methods {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.contact__method {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.contact__link {
+  color: #1a4cff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+
+.footer__text {
+  color: #555;
+}
+
+/* ===== Responsive simple ===== */
+@media (min-width: 800px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__brand {
+    margin-bottom: 0;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__methods {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
