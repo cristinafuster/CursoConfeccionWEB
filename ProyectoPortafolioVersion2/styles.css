@@ -1,0 +1,365 @@
+/* =========================
+   styles.css — Portfolio Pro (Google Fonts)
+   Usa: Inter (texto) + Poppins (títulos)
+   ========================= */
+
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Tipografía de títulos (coherente en todo el sitio) */
+.header__name,
+.hero__title,
+.section-title,
+.project__title,
+.contact__method-title {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Layout ===== */
+.header__container,
+.hero__container,
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container,
+.footer__container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header__brand {
+  margin-bottom: 12px;
+}
+
+.header__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header__tagline {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== Navegación ===== */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #1a4cff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link--active {
+  text-decoration: underline;
+}
+
+/* ===== Secciones ===== */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.section-lead {
+  color: #555;
+  margin-bottom: 16px;
+  max-width: 70ch;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 30px 0;
+}
+
+.hero__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  color: #444;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero__description {
+  color: #555;
+  margin-bottom: 18px;
+  max-width: 65ch;
+}
+
+/* Botones / acciones */
+.hero__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.button--primary {
+  background: #1a4cff;
+  color: #fff;
+}
+
+.button--primary:hover {
+  opacity: 0.9;
+}
+
+.button--secondary {
+  background: #ffffff;
+  border: 2px solid #1a4cff;
+  color: #1a4cff;
+}
+
+.button--secondary:hover {
+  background: #eef2ff;
+}
+
+.button--large {
+  margin-top: 14px;
+  padding: 12px 16px;
+}
+
+/* Stats */
+.hero__stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 160px;
+}
+
+.stat__number {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stat__label {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ===== Quote ===== */
+.quote {
+  margin-top: 16px;
+  background: #ffffff;
+  border-left: 4px solid #1a4cff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.quote__text {
+  color: #333;
+}
+
+.quote__author {
+  display: block;
+  margin-top: 6px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== Proyectos ===== */
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.project {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.project--featured {
+  border: 2px solid #ffb703;
+}
+
+.project__badge {
+  display: inline-block;
+  background: #ffb703;
+  color: #222;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.project__title {
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.project__description {
+  color: #555;
+  margin-bottom: 10px;
+  max-width: 70ch;
+}
+
+/* Tags */
+.project__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #1a4cff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Links de proyecto */
+.project__links {
+  display: flex;
+  gap: 12px;
+}
+
+.project__link {
+  color: #1a4cff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Skills ===== */
+.skills__list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skills__item {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+/* ===== Contacto ===== */
+.contact__methods {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.contact__method {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.contact__method-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact__link {
+  color: #1a4cff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+
+.footer__text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive simple ===== */
+@media (min-width: 800px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__brand {
+    margin-bottom: 0;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__methods {
+    grid-template-columns: 1fr 1fr;
+  }
+}
