@@ -1,0 +1,72 @@
+/* ===============================
+   VARIABLES GLOBALES
+   =============================== */
+
+/* :root representa toda la página */
+:root {
+  --text-color: #ffffff;
+  --radius: 14px;
+
+  /* Colores para cada degradado */
+  --fire-start: #e74c3c;
+  --fire-end: #f39c12;
+
+  --ice-start: #5dade2;
+  --ice-end: #aed6f1;
+
+  --energy-start: #f1c40f;
+  --energy-end: #e67e22;
+
+  --magic-start: #9b59b6;
+  --magic-end: #2c3e50;
+}
+
+/* ===============================
+   ESTILOS GENERALES
+   =============================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+/* ===============================
+   CLASE BASE REUTILIZABLE
+   =============================== */
+
+.card {
+  width: 180px;
+  height: 90px;
+  margin: 10px;
+
+  display: inline-flex;           /* Flex para centrar contenido */
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-color);       /* Usa variable */
+  font-weight: bold;
+  border-radius: var(--radius);   /* Usa variable */
+}
+
+/* ===============================
+   VARIANTES VISUALES
+   =============================== */
+
+/* Cada clase SOLO define el degradado */
+
+.fire {
+  background: linear-gradient(var(--fire-start), var(--fire-end));
+}
+
+.ice {
+  background: linear-gradient(to right, var(--ice-start), var(--ice-end));
+}
+
+.energy {
+  background: linear-gradient(to bottom right, var(--energy-start), var(--energy-end));
+}
+
+.magic {
+  background: radial-gradient(circle, var(--magic-start), var(--magic-end));
+}
