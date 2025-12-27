@@ -1,0 +1,42 @@
+/* Estilo base común para todos los ejemplos */
+div {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  display: inline-block;   /* Se colocan en línea */
+  text-align: center;
+  line-height: 60px;       /* Centrado vertical aproximado */
+  font-weight: bold;
+}
+
+/* Degradado lineal simple (de arriba a abajo por defecto) */
+.linear-simple {
+  background: linear-gradient(#3498db, #9b59b6);
+}
+
+/* Degradado lineal de izquierda a derecha */
+.linear-direction {
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+}
+
+/* Degradado lineal en diagonal */
+.linear-diagonal {
+  background: linear-gradient(to bottom right, #2ecc71, #3498db);
+}
+
+/* Degradado radial desde el centro */
+.radial-simple {
+  background: radial-gradient(circle, #f39c12, #e74c3c);
+}
+
+/* Degradado radial cuyo centro está en una esquina */
+.radial-position {
+  background: radial-gradient(circle at top left, #e74c3c, #3498db);
+}
+
+/* Degradado lineal con varios colores */
+.multiple {
+  background: linear-gradient(to right, red, orange, yellow, green, blue);
+}
