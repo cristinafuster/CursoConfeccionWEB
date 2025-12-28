@@ -1,0 +1,58 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin: 20px 0 10px;
+}
+
+/* CONTENEDOR FLEX (el parque) */
+.park {
+  display: flex;              /* Activa Flexbox */
+  background: #e0e7ff;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* PERSONAS (items) */
+.person {
+  background: #1a4cff;
+  color: white;
+  padding: 20px;
+  margin: 6px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Persona más pequeña */
+.small {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* VARIANTES DE FLEXBOX */
+
+/* Columna */
+.column {
+  flex-direction: column;
+}
+
+/* Centrado en eje principal */
+.center {
+  justify-content: center;
+}
+
+/* Centrado en eje transversal */
+.align {
+  align-items: center;
+}
