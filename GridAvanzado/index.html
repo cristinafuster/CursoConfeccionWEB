@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Avanzado</title>
+
+  <!-- Enlazamos el CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- TÍTULO PRINCIPAL -->
+  <h1>CSS Grid Avanzado</h1>
+
+  <!-- ================================= -->
+  <!-- 1) GRID AREAS -->
+  <!-- Layout completo con áreas -->
+  <!-- ================================= -->
+  <h2>Grid Areas</h2>
+
+  <div class="grid-areas">
+    <!-- Cada elemento corresponde a un área del layout -->
+    <header class="header">Header</header>
+    <nav class="sidebar">Sidebar</nav>
+    <main class="content">Content</main>
+    <footer class="footer">Footer</footer>
+  </div>
+
+  <!-- ================================= -->
+  <!-- 2) GRID SPAN -->
+  <!-- Un elemento ocupa varias columnas -->
+  <!-- ================================= -->
+  <h2>Grid Span</h2>
+
+  <div class="grid-span">
+    <div class="item">1</div>
+
+    <!-- Este elemento se extiende por 2 columnas -->
+    <div class="item span-2">Span 2 columnas</div>
+
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+
+  <!-- ================================= -->
+  <!-- 3) GRID LINES -->
+  <!-- Posicionamiento usando líneas -->
+  <!-- ================================= -->
+  <h2>Grid Lines</h2>
+
+  <div class="grid-lines">
+    <!-- Ocupa desde la línea 1 hasta la 3 -->
+    <div class="item box-1">Col 1–3</div>
+
+    <!-- Se queda en la tercera columna -->
+    <div class="item box-2">Col 3</div>
+
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+</body>
+
+</html>
