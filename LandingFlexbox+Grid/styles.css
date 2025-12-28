@@ -7,9 +7,20 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: #0b0f19;
   color: #e8eaf0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 /* =========================
@@ -23,58 +34,100 @@ body {
   color: #0b0f19;
   font-weight: 700;
   border: none;
+  cursor: pointer;
 }
 
 .btn.secondary {
-  background: rgba(255,255,255,0.12);
-  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  color: #e8eaf0;
 }
 
 .btn.small {
-  margin-top: auto; /* empuja el botón al fondo de la card (flex) */
+  margin-top: auto; /* empuja el botón al fondo de la card (Flexbox) */
 }
 
 /* =========================
-   NAVBAR (FLEXBOX)
+   TOPBAR / NAVBAR (FLEXBOX)
    ========================= */
-.nav {
-  display: flex;                 /* activa Flexbox */
-  justify-content: space-between;/* reparte los elementos */
-  align-items: center;           /* centra verticalmente */
-  padding: 16px;
+.topbar {
+  position: sticky;   /* se queda pegada arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;      /* garantiza que esté por encima del resto */
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Links del menú */
-.links {
-  display: flex; /* enlaces en fila */
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 18px;
+
+  display: flex;                 /* FLEXBOX */
+  align-items: center;           /* centra verticalmente */
+  justify-content: space-between;/* reparte los bloques */
   gap: 14px;
 }
 
+.brand {
+  font-weight: 900;
+}
+
+.links {
+  display: flex; /* enlaces en fila */
+  gap: 14px;
+  opacity: 0.9;
+}
 
 /* =========================
    LAYOUT PRINCIPAL (GRID)
    ========================= */
 .layout {
-  display: grid;                 /* activa Grid */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 18px 40px;
+
+  display: grid;                 /* GRID */
   grid-template-columns: 2fr 1fr;/* contenido + aside */
-  gap: 20px;
-  padding: 20px;
+  gap: 18px;
 }
 
 /* =========================
    HERO
    ========================= */
 .hero {
-  padding: 20px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 16px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Botones del hero alineados con FLEX */
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  margin: 10px 0;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.lead {
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+/* Botones del hero (FLEXBOX) */
 .hero-actions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 /* =========================
@@ -87,25 +140,62 @@ body {
 }
 
 .badge {
-  padding: 10px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
    ASIDE
    ========================= */
 .aside {
-  padding: 20px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 16px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.aside h2 {
+  margin-top: 0;
+}
+
+.checklist {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.checklist li {
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.mini-note {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 45, 120, 0.12);
+  border: 1px solid rgba(255, 45, 120, 0.22);
 }
 
 /* =========================
-   SECCIÓN DE CARDS
+   SECCIÓN CARDS
    ========================= */
 .cards-section {
   grid-column: 1 / -1; /* ocupa todas las columnas del grid principal */
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-head h2 {
+  margin: 0 0 6px;
+}
+
+.section-head p {
+  margin: 0 0 16px;
+  opacity: 0.85;
 }
 
 /* GRID de cards */
@@ -115,42 +205,95 @@ body {
   gap: 14px;
 }
 
-/* Card individual */
+/* Card individual (FLEXBOX interno) */
 .card {
-  display: flex;                /* Flexbox dentro de la card */
-  flex-direction: column;       /* contenido en columna */
-  padding: 16px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  display: flex;                /* FLEXBOX */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.9;
 }
 
 /* Meta info alineada con flex */
 .meta {
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.card.featured {
+  border: 1px solid rgba(255, 45, 120, 0.35);
+  background: rgba(255, 45, 120, 0.10);
 }
 
 /* =========================
-   FORMULARIO (FLEXBOX)
+   CTA FINAL
    ========================= */
+.cta {
+  grid-column: 1 / -1;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Formulario (FLEXBOX) */
 .form {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8eaf0;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  text-align: center;
+  padding: 20px 18px 26px;
+  opacity: 0.7;
 }
 
 /* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 900px) {
-  /* El grid pasa a una sola columna */
+  /* El layout pasa a una sola columna */
   .layout {
     grid-template-columns: 1fr;
   }
 
-  /* Cards en columna */
+  /* Las cards se apilan */
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Simplificamos el menú en móvil */
+  .links {
+    display: none;
   }
 }
