@@ -1,0 +1,76 @@
+/* =====================
+   ESTILO BASE
+   ===================== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+/* Elementos visuales */
+.item {
+  background: #a3208d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Variante más pequeña */
+.item.small {
+  padding: 10px;
+}
+
+/* =====================
+   FLEXBOX
+   ===================== */
+
+/* Contenedor flex base */
+.flex-container {
+  display: flex;      /* activa Flexbox */
+  gap: 10px;          /* espacio entre elementos */
+  margin-bottom: 20px;
+}
+
+/* Cambia el eje principal a vertical */
+.flex-container.column {
+  flex-direction: column;
+}
+
+/* Centra los elementos horizontalmente */
+.flex-container.center {
+  justify-content: center;
+}
+
+/* Alinea los elementos en el eje vertical */
+.flex-container.align {
+  align-items: center;
+  height: 120px; /* altura para que se note el efecto */
+}
+
+/* =====================
+   GRID
+   ===================== */
+
+/* Contenedor grid base */
+.grid-container {
+  display: grid;                      /* activa Grid */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Grid con fracciones distintas */
+.grid-container.fr {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* Grid con más espacio entre celdas */
+.grid-container.gap {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
