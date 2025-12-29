@@ -1,0 +1,102 @@
+/* =========================================================
+   1) Estilos base para la página (solo para que se vea bien)
+   ========================================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 24px;
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.intro {
+  max-width: 70ch;
+  margin-bottom: 18px;
+  color: #5b6472;
+}
+
+/* Contenedor para centrar la card (no es obligatorio) */
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   2) CARD: base (lo que se ve sin hover)
+   ========================================================= */
+
+.card {
+  width: 300px;                 /* Tamaño controlado de la card */
+  padding: 30px;                /* Aire interno para legibilidad */
+  background: #ffffff;          /* Fondo blanco */
+  border: 2px solid #ecf0f1;    /* Borde gris claro */
+  border-radius: 10px;          /* Esquinas redondeadas */
+  cursor: pointer;              /* Indica que es interactiva */
+
+  /* ✅ Transiciones CONSISTENTES:
+     - Animamos SOLO lo que va a cambiar
+     - Mismo tiempo (0.3s) y mismo tipo de movimiento (ease)
+     - Esto hace el efecto más “profesional” */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================================
+   3) CARD: hover (lo que cambia al pasar el ratón)
+   ========================================================= */
+
+.card:hover {
+  transform: translateY(-10px);                 /* “Sube” la card */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);   /* Sombra para profundidad */
+  border-color: #3498db;                        /* Borde azul para foco */
+}
+
+/* =========================================================
+   4) CONTENIDO DE LA CARD
+   ========================================================= */
+
+/* Título */
+.card h3 {
+  margin: 0 0 10px;          /* Separación con el texto */
+  color: #2c3e50;            /* Gris oscuro */
+  transition: color 0.3s ease; /* ✅ transición del color del título */
+}
+
+/* Importante: el hover lo activamos desde la CARD (contenedor),
+   no desde el h3, para que sea más fácil y consistente */
+.card:hover h3 {
+  color: #3498db;
+}
+
+/* Párrafo */
+.card p {
+  margin: 0;
+  color: #7f8c8d;  /* Gris más suave */
+
+  /* ✅ Aquí está lo “nuevo”:
+     - La transición tiene un DELAY (0.1s)
+     - Eso hace que el texto “entre” después de la card */
+  transition: transform 0.3s ease 0.1s;
+}
+
+/* El párrafo se mueve cuando el hover está en la CARD */
+.card:hover p {
+  transform: translateX(10px);
+}
+
+/* =========================================================
+   5) Nota didáctica importante
+   ========================================================= */
+/*
+- La card anima 3 cosas: transform, sombra y borde.
+- El título anima el color.
+- El párrafo anima transform con un pequeño delay (0.1s).
+- Esto crea una secuencia: primero se mueve la card, luego el texto.
+- Evita hacer 2 transform en el mismo selector (se pisan).
+*/
