@@ -6,27 +6,67 @@
 </head>
 <body>
 
+  <!-- Título informativo -->
   <h2>Alarma con temporizador</h2>
 
+  <!-- Texto explicativo para el usuario -->
   <p>Elige el tiempo (en segundos):</p>
+
+  <!-- 
+    Input numérico donde el usuario escribe 
+    cuántos segundos quiere esperar 
+  -->
   <input type="number" id="tiempoElegido">
 
+  <!-- 
+    Botón que inicia la alarma.
+    Al hacer clic, se ejecuta la función comenzarTiempo()
+  -->
   <button onclick="comenzarTiempo()">Alarma</button>
 
+  <!-- 
+    Texto que indica el estado de la alarma.
+    Empieza en rojo y con el texto "Apagado"
+  -->
   <h1 id="textoAlarma" style="color: red;">Apagado</h1>
 
   <script>
+    /*
+      Esta función se ejecuta cuando el usuario
+      hace clic en el botón "Alarma"
+    */
     function comenzarTiempo() {
+
+      // Capturamos el input donde el usuario escribió los segundos
       let elementoSegundos = document.getElementById("tiempoElegido");
+
+      /*
+        Convertimos los segundos a milisegundos.
+        setTimeout trabaja siempre en milisegundos:
+        1000 ms = 1 segundo
+      */
       let tiempoEnMilisegundos = 1000 * elementoSegundos.value;
 
+      /*
+        Iniciamos el temporizador.
+        - funcionEjecutar: lo que se ejecutará al final del tiempo
+        - tiempoEnMilisegundos: cuánto tiempo debe esperar
+      */
       setTimeout(funcionEjecutar, tiempoEnMilisegundos);
     }
 
+    /*
+      Esta función se ejecuta cuando el tiempo se cumple
+    */
     function funcionEjecutar() {
+
+      // Capturamos el elemento h1 que muestra el estado de la alarma
       let elementoTextoAlarma = document.getElementById("textoAlarma");
 
+      // Cambiamos el texto que se muestra en pantalla
       elementoTextoAlarma.textContent = "Encendido";
+
+      // Cambiamos el color del texto a verde
       elementoTextoAlarma.style.color = "green";
     }
   </script>
