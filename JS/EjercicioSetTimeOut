@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alarma con setTimeout</title>
+</head>
+<body>
+
+  <h2>Alarma con temporizador</h2>
+
+  <p>Elige el tiempo (en segundos):</p>
+  <input type="number" id="tiempoElegido">
+
+  <button onclick="comenzarTiempo()">Alarma</button>
+
+  <h1 id="textoAlarma" style="color: red;">Apagado</h1>
+
+  <script>
+    function comenzarTiempo() {
+      let elementoSegundos = document.getElementById("tiempoElegido");
+      let tiempoEnMilisegundos = 1000 * elementoSegundos.value;
+
+      setTimeout(funcionEjecutar, tiempoEnMilisegundos);
+    }
+
+    function funcionEjecutar() {
+      let elementoTextoAlarma = document.getElementById("textoAlarma");
+
+      elementoTextoAlarma.textContent = "Encendido";
+      elementoTextoAlarma.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
