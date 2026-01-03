@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de mascotas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <h1>Registro de mascota</h1>
+
+  <form>
+
+    <!-- NOMBRE -->
+    <!-- Opción recomendada: usar label -->
+    <label for="nombre">Nombre de la mascota:</label><br>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      placeholder="Escribe el nombre de la mascota"
+      required
+    >
+
+    <br><br>
+
+    <!-- EDAD -->
+    <!-- Opción recomendada: usar label -->
+    <label for="edad">Edad:</label><br>
+    <input
+      type="number"
+      id="edad"
+      name="edad"
+      min="0"
+      max="30"
+    >
+
+    <br><br>
+
+    <!-- VACUNADA -->
+    <!-- Opción recomendada: usar label -->
+    <input type="checkbox" id="vacunada" name="vacunada" checked>
+    <label for="vacunada">¿Está vacunada?</label>
+
+    <br><br>
+
+    <!-- BOTÓN -->
+    <input type="submit" value="Enviar">
+
+  </form>
+
+</body>
+</html>
+
