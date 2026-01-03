@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de vacaciones 2026</title>
+
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Planificador de vacaciones 2026</h1>
+  <p>Completa este formulario para organizar tus próximas vacaciones.</p>
+
+  <form>
+
+    <label for="colorVacaciones">
+      Color para marcar las vacaciones en el calendario:
+    </label>
+    <input type="color" id="colorVacaciones" name="colorVacaciones">
+
+    <label for="fechaSalida">
+      Fecha de salida:
+    </label>
+    <input type="date" id="fechaSalida" name="fechaSalida" required>
+
+    <label for="horaSalida">
+      Hora aproximada de salida:
+    </label>
+    <input type="time" id="horaSalida" name="horaSalida">
+
+    <label for="semana">
+      Semana del año:
+    </label>
+    <input type="week" id="semana" name="semana">
+
+    <label for="mesPreferido">
+      Mes del viaje:
+    </label>
+    <input type="month" id="mesPreferido" name="mesPreferido">
+
+    <label for="relax">
+      Nivel de relax (0 = activo, 10 = descanso total):
+    </label>
+    <input type="range" id="relax" name="relax" min="0" max="10" value="5">
+
+    <label for="documentos">
+      Subir documentación (reservas, billetes, seguro):
+    </label>
+    <input type="file" id="documentos" name="documentos" accept=".pdf,image/*">
+
+    <button type="submit">Guardar planificación</button>
+
+  </form>
+
+</body>
+</html>
