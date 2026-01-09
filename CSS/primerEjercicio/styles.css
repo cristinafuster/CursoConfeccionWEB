@@ -1,0 +1,25 @@
+/* 1️⃣ Cambiar el color del botón al pasar el ratón */
+.btn:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+/* 2️⃣ Resaltar el input cuando está activo */
+input:focus {
+  outline: 2px solid #3498db;
+  background-color: #e8f4f8;
+}
+
+/* 3️⃣ Primer elemento de la lista en negrita */
+.lista li:first-child {
+  font-weight: bold;
+}
+
+/* 4️⃣ Añadir comillas al texto sin tocar el HTML */
+.quote::before {
+  content: '"';
+}
+
+.quote::after {
+  content: '"';
+}
