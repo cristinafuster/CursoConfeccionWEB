@@ -1,0 +1,43 @@
+/* Reset básico para evitar comportamientos raros */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+  display: flex;                    /* Activa Flexbox */
+  justify-content: space-between;   /* Izquierda - centro - derecha */
+  align-items: center;              /* Centrado vertical */
+  padding: 16px 32px;
+  background-color: #222;
+  color: white;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* MENÚ */
+.menu {
+  display: flex;        /* Flexbox dentro de Flexbox */
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* BOTÓN */
+.boton {
+  padding: 8px 16px;
+  background-color: fuchsia;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
