@@ -1,134 +1,159 @@
-/* =========================
-   estilos.css (CV online)
-   ========================= */
-
-/* ===== Reset básico ===== */
+/* ===== RESET BÁSICO ===== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===== ESTILOS GENERALES ===== */
 body {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background-color: #f6f7fb;
-  color: #222;
+  color: #1f2430;
   line-height: 1.6;
 }
 
-/* ===== Contenedor general ===== */
+/* ===== CONTENEDOR ===== */
 .contenedor {
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* ===== Cabecera fija ===== */
+/* ===== CABECERA FIJA ===== */
 .cabecera {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e7e9f2;
+
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  z-index: 10;
+  z-index: 1000;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Flexbox en cabecera (solo cuando hay sitio) */
+/* Flexbox en la cabecera */
 .cabecera-flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  align-items: center;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .marca h1 {
   font-size: 22px;
-}
-
-.perfil {
-  color: #555;
-  font-size: 14px;
-}
-
-/* Menú */
-.menu {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #1a4cff;
   font-weight: 700;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.perfil {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5b6477;
 }
 
-/* ===== Contenido principal ===== */
-/* Dejamos espacio arriba para que el header fijo no tape el contenido */
+/* Espacio para compensar el header fijo */
 .principal {
   margin-top: 110px;
 }
 
-/* Tarjetas (secciones) */
+/* ===== NAVEGACIÓN ===== */
+.menu a {
+  color: #2a5cff;
+  text-decoration: none;
+  font-weight: 600;
+
+  margin-right: 12px;
+  padding: 6px 2px;
+
+  display: inline-block;
+  position: relative;
+}
+
+/* Subrayado animado */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+  background-color: #2a5cff;
+
+  transition: width 0.2s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ===== TARJETAS ===== */
 .tarjeta {
   background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 18px;
+
+  box-shadow: 0 10px 24px rgba(18, 28, 45, 0.06);
 }
 
 .tarjeta h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-/* ===== Sobre mí (foto + texto) ===== */
-.sobre-mi-flex {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.foto-cv {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #e6e6e6;
-}
-
-/* ===== Listas ===== */
-.lista {
-  list-style: none;
-  display: grid;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.sublista {
-  margin-top: 8px;
-  padding-left: 18px;
-}
-
-.sublista li {
-  margin-bottom: 6px;
-}
-
-/* Texto destacado */
-.texto-destacado {
-  color: #555;
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
-/* ===== Contacto ===== */
+/* Texto auxiliar */
+.texto-destacado {
+  color: #5b6477;
+  margin-bottom: 12px;
+}
+
+/* ===== SOBRE MÍ ===== */
+.sobre-mi-flex {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.foto-cv {
+  width: 140px;
+  border-radius: 50%;
+  border: 3px solid #eef2ff;
+  box-shadow: 0 10px 24px rgba(18, 28, 45, 0.10);
+}
+
+/* ===== LISTAS ===== */
+.lista {
+  list-style: none;
+}
+
+.lista > li {
+  background-color: #fbfcff;
+  border: 1px solid #e7e9f2;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+/* Sublistas (bullet points) */
+.sublista {
+  margin-top: 8px;
+  margin-left: 18px;
+  list-style: disc;
+}
+
+.sublista li {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 6px;
+  color: #4a5366;
+}
+
+/* ===== CONTACTO ===== */
 .contacto-flex {
   display: flex;
   gap: 12px;
@@ -137,47 +162,50 @@ body {
 
 .contacto-caja {
   background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
   padding: 14px;
-  min-width: 220px;
+  min-width: 240px;
+  flex: 1;
+
+  box-shadow: 0 10px 24px rgba(18, 28, 45, 0.06);
+}
+
+.contacto-caja h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 .contacto-caja a {
-  color: #1a4cff;
-  text-decoration: none;
+  color: #2a5cff;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .contacto-caja a:hover {
   text-decoration: underline;
 }
 
-/* ===== Pie de página ===== */
+/* ===== PIE DE PÁGINA ===== */
 .pie {
-  margin-top: 30px;
-  border-top: 1px solid #e6e6e6;
+  margin-top: 28px;
+  border-top: 1px solid #e7e9f2;
   background-color: #ffffff;
 }
 
-.pie p {
-  color: #555;
-}
-
-/* ===== Responsive simple ===== */
+/* ===== RESPONSIVE BÁSICO ===== */
 @media (max-width: 600px) {
-  .principal {
-    margin-top: 140px;
-  }
-
   .sobre-mi-flex {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
-}
 
+  .contacto-flex {
+    flex-direction: column;
+  }
 
-  .nav a {
+  .menu a {
     margin-top: 6px;
   }
 }
+
