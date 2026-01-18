@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título del documento -->
+  <title>Tu Nombre · CV Online</title>
+
+  <!-- Descripción para buscadores -->
+  <meta name="description" content="CV online de Tu Nombre. Experiencia, formación, habilidades y contacto.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER FIJO ===== -->
+  <header class="header">
+    <div class="container header-flex">
+
+      <!-- Nombre y perfil -->
+      <div class="brand">
+        <h1>Tu Nombre y Apellidos</h1>
+        <p class="tagline">Estudiante de desarrollo web en formación</p>
+      </div>
+
+      <!-- Navegación interna -->
+      <nav class="nav">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#formacion">Formación</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="container main">
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="card" id="sobre-mi">
+      <h2>Sobre mí</h2>
+
+      <!-- Flexbox: foto + texto -->
+      <div class="sobre-mi-flex">
+
+        <!-- Foto del alumno -->
+        <img
+          src="img/FotoWeb.png"
+          alt="Foto de Tu Nombre"
+          class="foto-cv"
+        >
+
+        <p>
+          Actualmente estoy formándome en creación de páginas web utilizando HTML y CSS.
+          Me interesa aprender a desarrollar webs claras, ordenadas y fáciles de usar,
+          y seguir mejorando mis conocimientos para trabajar en proyectos reales.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCIA PROFESIONAL ===== -->
+    <section class="card" id="experiencia">
+      <h2>Experiencia profesional</h2>
+
+      <ul class="list">
+
+        <li>
+          <strong>Dependiente/a</strong><br>
+          Nombre de la empresa · 2023–2024
+
+          <ul class="sublist">
+            <li>Atención al cliente y resolución de dudas</li>
+            <li>Organización y reposición de productos</li>
+            <li>Cobro en caja y apoyo en pedidos</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Prácticas de formación</strong><br>
+          Empresa o centro · 2025
+
+          <ul class="sublist">
+            <li>Apoyo en tareas básicas del día a día</li>
+            <li>Uso de herramientas informáticas básicas</li>
+            <li>Trabajo en equipo y seguimiento de instrucciones</li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ===== FORMACIÓN ===== -->
+    <section class="card" id="formacion">
+      <h2>Formación</h2>
+
+      <ul class="list">
+        <li>
+          <strong>Certificado de Confección y Publicación de Páginas Web</strong><br>
+          Centro de formación · 2025–2026
+        </li>
+
+        <li>
+          <strong>ESO / Bachillerato / FP</strong><br>
+          Centro educativo · Año
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="card" id="habilidades">
+      <h2>Habilidades</h2>
+
+      <ul class="list">
+        <li>HTML semántico y estructura de páginas web</li>
+        <li>CSS básico: colores, tipografía y box model</li>
+        <li>Pseudoclases básicas (:hover, :focus)</li>
+        <li>Flexbox (nivel inicial)</li>
+        <li>Uso de Visual Studio Code</li>
+      </ul>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="card" id="contacto">
+      <h2>Contacto</h2>
+      <p class="lead">Puedes contactar conmigo a través de:</p>
+
+      <div class="contact-flex">
+
+        <div class="contact-box">
+          <h3>📧 Email</h3>
+          <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
+        </div>
+
+        <div class="contact-box">
+          <h3>💼 LinkedIn</h3>
+          <a href="#" target="_blank" rel="noopener">Tu perfil</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Tu Nombre · CV realizado con HTML y CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
