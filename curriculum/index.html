@@ -1,3 +1,7 @@
+<!-- =========================
+     index.html (CV online)
+     Clases e IDs en castellano
+     ========================= -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,23 +21,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Enlace al archivo CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-  <!-- ===== HEADER FIJO ===== -->
-  <header class="header">
-    <div class="container header-flex">
+  <!-- =========================
+       CABECERA FIJA
+       ========================= -->
+  <header class="cabecera">
+    <div class="contenedor cabecera-flex">
 
       <!-- Nombre y perfil -->
-      <div class="brand">
+      <div class="marca">
         <h1>Tu Nombre y Apellidos</h1>
-        <p class="tagline">Estudiante de desarrollo web en formación</p>
+        <p class="perfil">Estudiante de desarrollo web en formación</p>
       </div>
 
       <!-- Navegación interna -->
-      <nav class="nav">
+      <nav class="menu" aria-label="Menú principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#formacion">Formación</a>
@@ -44,11 +50,15 @@
     </div>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
-  <main class="container main">
+  <!-- =========================
+       CONTENIDO PRINCIPAL
+       ========================= -->
+  <main class="contenedor principal">
 
-    <!-- ===== SOBRE MÍ ===== -->
-    <section class="card" id="sobre-mi">
+    <!-- =========================
+         SOBRE MÍ
+         ========================= -->
+    <section class="tarjeta" id="sobre-mi">
       <h2>Sobre mí</h2>
 
       <!-- Flexbox: foto + texto -->
@@ -56,7 +66,7 @@
 
         <!-- Foto del alumno -->
         <img
-          src="img/FotoWeb.png"
+          src="img/foto-cv.png"
           alt="Foto de Tu Nombre"
           class="foto-cv"
         >
@@ -70,17 +80,19 @@
       </div>
     </section>
 
-    <!-- ===== EXPERIENCIA PROFESIONAL ===== -->
-    <section class="card" id="experiencia">
+    <!-- =========================
+         EXPERIENCIA PROFESIONAL
+         ========================= -->
+    <section class="tarjeta" id="experiencia">
       <h2>Experiencia profesional</h2>
 
-      <ul class="list">
+      <ul class="lista">
 
         <li>
           <strong>Dependiente/a</strong><br>
           Nombre de la empresa · 2023–2024
 
-          <ul class="sublist">
+          <ul class="sublista">
             <li>Atención al cliente y resolución de dudas</li>
             <li>Organización y reposición de productos</li>
             <li>Cobro en caja y apoyo en pedidos</li>
@@ -91,7 +103,7 @@
           <strong>Prácticas de formación</strong><br>
           Empresa o centro · 2025
 
-          <ul class="sublist">
+          <ul class="sublista">
             <li>Apoyo en tareas básicas del día a día</li>
             <li>Uso de herramientas informáticas básicas</li>
             <li>Trabajo en equipo y seguimiento de instrucciones</li>
@@ -101,11 +113,13 @@
       </ul>
     </section>
 
-    <!-- ===== FORMACIÓN ===== -->
-    <section class="card" id="formacion">
+    <!-- =========================
+         FORMACIÓN
+         ========================= -->
+    <section class="tarjeta" id="formacion">
       <h2>Formación</h2>
 
-      <ul class="list">
+      <ul class="lista">
         <li>
           <strong>Certificado de Confección y Publicación de Páginas Web</strong><br>
           Centro de formación · 2025–2026
@@ -118,11 +132,13 @@
       </ul>
     </section>
 
-    <!-- ===== HABILIDADES ===== -->
-    <section class="card" id="habilidades">
+    <!-- =========================
+         HABILIDADES
+         ========================= -->
+    <section class="tarjeta" id="habilidades">
       <h2>Habilidades</h2>
 
-      <ul class="list">
+      <ul class="lista">
         <li>HTML semántico y estructura de páginas web</li>
         <li>CSS básico: colores, tipografía y box model</li>
         <li>Pseudoclases básicas (:hover, :focus)</li>
@@ -131,19 +147,21 @@
       </ul>
     </section>
 
-    <!-- ===== CONTACTO ===== -->
-    <section class="card" id="contacto">
+    <!-- =========================
+         CONTACTO
+         ========================= -->
+    <section class="tarjeta" id="contacto">
       <h2>Contacto</h2>
-      <p class="lead">Puedes contactar conmigo a través de:</p>
+      <p class="texto-destacado">Puedes contactar conmigo a través de:</p>
 
-      <div class="contact-flex">
+      <div class="contacto-flex">
 
-        <div class="contact-box">
+        <div class="contacto-caja">
           <h3>📧 Email</h3>
           <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
         </div>
 
-        <div class="contact-box">
+        <div class="contacto-caja">
           <h3>💼 LinkedIn</h3>
           <a href="#" target="_blank" rel="noopener">Tu perfil</a>
         </div>
@@ -153,12 +171,15 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
+  <!-- =========================
+       PIE DE PÁGINA
+       ========================= -->
+  <footer class="pie">
+    <div class="contenedor">
       <p>© 2026 Tu Nombre · CV realizado con HTML y CSS</p>
     </div>
   </footer>
 
 </body>
 </html>
+
