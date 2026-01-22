@@ -96,6 +96,8 @@ body {
   border-radius: 14px;
   padding: 18px;
   margin-top: 18px;
+  scroll-margin-top: 130px;
+
 
   box-shadow: 0 10px 24px rgba(18, 28, 45, 0.06);
 }
@@ -180,11 +182,14 @@ body {
   color: #2a5cff;
   font-weight: 700;
   text-decoration: none;
+  cursor: url("img/cursorRosa.png"), pointer;
 }
 
 .contacto-caja a:hover {
   text-decoration: underline;
 }
+
+
 
 /* ===== PIE DE PÁGINA ===== */
 .pie {
@@ -193,6 +198,16 @@ body {
   background-color: #ffffff;
 }
 
+.menu-boton {
+  display: none; /* en escritorio no se ve */
+  font-size: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e7e9f2;
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+  
 /* ===== RESPONSIVE BÁSICO ===== */
 @media (max-width: 600px) {
   .sobre-mi-flex {
@@ -204,8 +219,42 @@ body {
     flex-direction: column;
   }
 
-  .menu a {
-    margin-top: 6px;
+
+
+  /* ===== BOTÓN MENÚ HAMBURGUESA ===== */
+
+
+  /* Mostrar botón hamburguesa */
+  .menu-boton {
+    display: inline-block;
   }
+
+  /* Menú oculto por defecto */
+  .menu {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Menú visible cuando está activo */
+  .menu.menu-activo {
+    display: block;
+  }
+
+  /* Enlaces en vertical */
+  .menu a {
+    display: block;
+    margin: 8px 0;
+  }
+
+
+    .marca h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+  }
+
+.perfil{font-size: 0.5rem;}
 }
 
